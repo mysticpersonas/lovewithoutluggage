@@ -1,16 +1,12 @@
 import type {
   NavContent,
   HeroContent,
-  ForYouIfContent,
   ProblemContent,
   ProgramOverviewContent,
   JourneyContent,
-  BenefitsContent,
   ProgramStructureContent,
-  WhyItWorksContent,
   ManifestoContent,
   GuidesContent,
-  GuaranteeContent,
   FooterContent,
 } from "@/lib/types";
 
@@ -54,7 +50,6 @@ export const hero: HeroContent = {
   ],
 };
 
-export const forYouIf: ForYouIfContent = {};
 export const problem: ProblemContent = {
   heading: [
     { text: "Still carrying the " },
@@ -163,7 +158,6 @@ export const journey: JourneyContent = {
   ],
 };
 
-export const benefits: BenefitsContent = {};
 // The 6-week roadmap. Copy is verbatim from the content file, lightly
 // re-punctuated (no em dashes) and split into calendar-sized pieces.
 export const programStructure: ProgramStructureContent = {
@@ -253,7 +247,6 @@ export const programStructure: ProgramStructureContent = {
   ],
   cta: { label: "Drop the baggage today", href: RESERVE_HREF },
 };
-export const whyItWorks: WhyItWorksContent = {};
 // The closing manifesto. Verbatim copy, em dashes rewritten as commas.
 export const manifesto: ManifestoContent = {
   eyebrow: "Why Mind Personas™",
@@ -305,6 +298,17 @@ export const manifesto: ManifestoContent = {
       ],
     },
   ],
+  guarantee: {
+    photo: "/images/travis-michelle.jpg",
+    photoAlt: "Dr. Travis Fox and Michelle Fox, laughing together",
+    caption: "Dr. Travis & Michelle Fox",
+    label: "7-day guarantee",
+    heading: [
+      { text: "Try it " },
+      { text: "100% risk-free.", em: true },
+    ],
+    body: "If you don’t feel a shift in 7 days, we’ll refund you, no questions asked.",
+  },
   cta: { label: "Join now", href: RESERVE_HREF },
 };
 // Bios trimmed to what proves expertise: credentials, proof points, one line
@@ -357,7 +361,6 @@ export const guides: GuidesContent = {
     },
   ],
 };
-export const guarantee: GuaranteeContent = {};
 export const footer: FooterContent = {
   brand: "Love Without Luggage™",
   tagline: "A 6-week live coaching journey for couples ready to release the past and love without fear.",
@@ -370,13 +373,6 @@ export const footer: FooterContent = {
         { label: "The Roadmap", href: "#program" },
         { label: "Your Guides", href: "#guides" },
         { label: "Guarantee", href: "#guarantee" },
-      ],
-    },
-    {
-      title: "Company",
-      links: [
-        { label: "Mystic Personas", href: "https://mysticpersonas.com/", external: true },
-        { label: "Terms & Conditions", href: "https://mysticpersonas.com/terms-and-conditions/", external: true },
       ],
     },
   ],

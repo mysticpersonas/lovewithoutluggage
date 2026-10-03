@@ -17,7 +17,6 @@ export type HeroContent = {
   trust: string[];
 };
 
-export type ForYouIfContent = Record<string, never>;
 export type StoryIcon = "broken-heart" | "heart" | "question" | "suitcase";
 
 export type ProblemContent = {
@@ -52,7 +51,6 @@ export type JourneyContent = {
   stages: Array<{ verb: string; rest: string }>;
 };
 
-export type BenefitsContent = Record<string, never>;
 export type Person = "travis" | "michelle";
 
 export type ProgramStructureContent = {
@@ -83,11 +81,18 @@ export type ProgramStructureContent = {
   }>;
   cta: Link;
 };
-export type WhyItWorksContent = Record<string, never>;
 export type ManifestoContent = {
   eyebrow: string;
   /** Each line lights up word by word as you scroll; `size` sets its weight in the story */
   lines: Array<{ text: RichText; size: "lead" | "body" | "turn" | "close" }>;
+  guarantee: {
+    photo: string;
+    photoAlt: string;
+    caption: string;
+    label: string;
+    heading: RichText;
+    body: string;
+  };
   cta: Link;
 };
 export type GuidesContent = {
@@ -104,7 +109,6 @@ export type GuidesContent = {
     leads: string[];
   }>;
 };
-export type GuaranteeContent = Record<string, never>;
 export type FooterContent = {
   brand: string;
   tagline: string;

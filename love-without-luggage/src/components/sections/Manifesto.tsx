@@ -3,7 +3,9 @@
 import { useEffect, useRef } from "react";
 import { manifesto } from "@/content/site";
 import type { RichText } from "@/lib/types";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
+import Rich from "@/components/ui/Rich";
 
 /*
   The closing manifesto, read like a slow exhale.
@@ -29,7 +31,7 @@ const EM = {
   turn: "font-light italic text-accent",
   close: "font-light italic text-accent",
 };
-const GAP = { lead: "mt-8", body: "mt-8", turn: "mt-0", close: "mt-[clamp(56px,9vh,96px)]" };
+const GAP = { lead: "mt-6 sm:mt-8", body: "mt-6 sm:mt-8", turn: "mt-0", close: "mt-[clamp(40px,6vw,88px)]" };
 
 function Words({ value, emClassName }: { value: RichText; emClassName: string }) {
   let i = 0;
@@ -59,6 +61,7 @@ const countWords = (v: RichText) => v.reduce((n, p) => n + p.text.split(/\s+/).f
 
 export default function Manifesto() {
   const c = manifesto;
+  const g = c.guarantee;
   const lineRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
   useEffect(() => {
@@ -96,9 +99,9 @@ export default function Manifesto() {
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_28%_at_50%_82%,rgba(122,58,96,0.26)_0%,rgba(15,9,17,0)_100%),radial-gradient(30%_14%_at_50%_80%,rgba(230,200,156,0.07)_0%,rgba(15,9,17,0)_100%)]"
       />
 
-      <div className="shell py-[clamp(112px,18vh,200px)]">
+      <div className="shell py-[clamp(44px,9vw,144px)]">
         <div className="mx-auto flex max-w-[46rem] flex-col items-center text-center">
-          <p className="mb-12 inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.14em] text-ink-faint sm:text-[13px]">
+          <p className="mb-8 inline-flex sm:mb-12 items-center gap-3 text-[12px] font-medium uppercase tracking-[0.14em] text-ink-faint sm:text-[13px]">
             <span className="dot" aria-hidden="true" />
             {c.eyebrow}
             <span className="dot" aria-hidden="true" />
@@ -110,7 +113,7 @@ export default function Manifesto() {
               {line.size === "turn" && (
                 <span
                   aria-hidden="true"
-                  className="mx-auto my-[clamp(48px,8vh,80px)] block h-14 w-px bg-[linear-gradient(180deg,rgba(230,200,156,0),#e6c89c)]"
+                  className="mx-auto my-[clamp(32px,5vw,72px)] block h-14 w-px bg-[linear-gradient(180deg,rgba(230,200,156,0),#e6c89c)]"
                 />
               )}
               <p
@@ -124,11 +127,45 @@ export default function Manifesto() {
               </p>
             </div>
           ))}
+        </div>
 
-          <div className="mt-[clamp(48px,8vh,72px)]">
-            <Button href={c.cta.href} className="btn-glow">
-              {c.cta.label}
-            </Button>
+        {/* ---------- Guarantee: their photo + the promise + the last call to action ---------- */}
+        <div
+          id="guarantee"
+          className="mx-auto mt-[clamp(40px,6vw,88px)] max-w-[1000px] scroll-mt-[calc(var(--nav-h)+16px)]"
+        >
+          <div className="panel grid overflow-hidden md:grid-cols-[1fr_1.05fr] md:bg-[#160d19]">
+            <figure className="relative aspect-[4/3] md:aspect-auto md:min-h-[420px]">
+              <Image
+                src={g.photo}
+                alt={g.photoAlt}
+                fill
+                sizes="(min-width: 768px) 480px, 100vw"
+                className="object-cover object-[50%_30%]"
+              />
+              <div aria-hidden="true" className="absolute inset-0 bg-[#2a1530] opacity-[0.16] mix-blend-multiply" />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,9,17,0)_55%,rgba(22,13,25,0.85)_100%)] md:bg-[linear-gradient(90deg,rgba(22,13,25,0)_60%,rgba(22,13,25,0.9)_100%)]"
+              />
+              <figcaption className="absolute bottom-4 left-5 text-[13px] font-medium text-ink-soft md:bottom-5 md:left-6">
+                {g.caption}
+              </figcaption>
+            </figure>
+
+            <div className="flex flex-col items-center justify-center p-7 text-center sm:p-10 md:items-start md:text-left">
+              <p className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-accent">
+                <span className="dot opacity-100" aria-hidden="true" />
+                {g.label}
+              </p>
+              <h2 className="mt-3 font-serif text-[clamp(1.875rem,3vw,2.5rem)] font-normal leading-[1.12] tracking-[-0.02em] text-ink [font-variation-settings:'SOFT'_100]">
+                <Rich value={g.heading} emClassName="font-light italic text-accent" />
+              </h2>
+              <p className="mt-4 max-w-[26rem] text-[16px] leading-[1.6] text-ink-soft sm:text-[17px]">{g.body}</p>
+              <Button href={c.cta.href} className="btn-glow mt-8">
+                {c.cta.label}
+              </Button>
+            </div>
           </div>
         </div>
       </div>

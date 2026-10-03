@@ -16,7 +16,7 @@ export default function Footer() {
     <footer className="relative border-t border-hairline bg-ground-deep">
       <div className="shell">
         {/* Top: brand + columns */}
-        <div className="grid gap-12 py-[clamp(56px,9vh,96px)] md:grid-cols-[1.4fr_1fr_1fr] md:gap-8">
+        <div className="grid gap-10 py-[clamp(48px,6vw,88px)] md:grid-cols-[2fr_1fr] md:gap-8">
           <div className="max-w-[24rem]">
             <p className={`${SERIF} text-[clamp(1.5rem,2.2vw,1.875rem)] leading-tight`}>
               {c.brand.replace("™", "")}
