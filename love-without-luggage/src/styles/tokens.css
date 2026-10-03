@@ -1,0 +1,46 @@
+/*
+  Design tokens — the single source of truth.
+  Tailwind reads these through tailwind.config.ts, so a class like `text-ink`
+  always resolves to the same value as `var(--ink)` in plain CSS.
+
+  Theme: "Dusk" — deep plum night + champagne-gold light.
+  Plum reads intimate and safe (not corporate navy, not cold black);
+  champagne gold is candlelight on plum — warm, premium, and it echoes
+  both the golden light in the hero footage and the gold brand mark.
+*/
+:root {
+  color-scheme: dark;
+
+  /* Ink: warm cream, never pure white — easier on the eyes for long reading */
+  --ink: #f8f1ec;
+  --ink-soft: rgba(248, 241, 236, 0.86); /* body copy — kept high for readability */
+  --ink-faint: rgba(248, 241, 236, 0.64); /* labels, meta */
+
+  /* Accent: champagne gold. The ONE accent — emphasis words, chips, highlights */
+  --accent: #e6c89c;
+  --accent-ink: #2a1520; /* text placed ON accent/cream surfaces */
+
+  /* Surfaces: plum near-blacks */
+  --ground: #1d1220;
+  --ground-deep: #0f0911;
+  --glass: rgba(29, 18, 32, 0.6);
+  --hairline: rgba(248, 241, 236, 0.12);
+
+  /* Fonts — the variables on the right are injected by next/font in layout.tsx */
+  --font-serif: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Layout */
+  --gutter: clamp(20px, 4vw, 56px);
+  --shell: 1280px;
+  --nav-h: 64px; /* mobile: slimmer bar, more room for the hero */
+
+  /* Motion: one long, soft deceleration for everything — calm, never bouncy */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --nav-h: 80px;
+  }
+}
