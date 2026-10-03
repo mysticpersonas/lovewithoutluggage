@@ -27,3 +27,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .next-preview/
+
+# full-size source photos (not deployed)
+/originals/
