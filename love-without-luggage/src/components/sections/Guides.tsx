@@ -66,7 +66,7 @@ export default function Guides() {
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(55%_30%_at_50%_8%,rgba(122,58,96,0.2)_0%,rgba(15,9,17,0)_100%)]"
       />
 
-      <div className="shell py-[clamp(96px,14vh,160px)]">
+      <div className="shell py-[clamp(40px,8vw,128px)]">
         <Reveal className="text-center">
           <p className="inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.14em] text-ink-faint sm:text-[13px]">
             <span className="dot" aria-hidden="true" />
@@ -78,7 +78,7 @@ export default function Guides() {
           </h2>
         </Reveal>
 
-        <div className="mx-auto mt-[clamp(40px,7vh,72px)] flex max-w-[1120px] flex-col gap-6 lg:gap-[18vh]">
+        <div className="mx-auto mt-[clamp(28px,4.5vw,64px)] flex max-w-[1120px] flex-col gap-6 lg:gap-[18vh]">
           {c.guides.map((g, i) => (
             <div
               key={g.name}

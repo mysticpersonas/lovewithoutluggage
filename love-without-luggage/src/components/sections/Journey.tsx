@@ -74,7 +74,7 @@ export default function Journey() {
       ref={sectionRef}
       id="journey"
       aria-labelledby="journey-heading"
-      className="relative h-[400svh] bg-ground-deep"
+      className="relative h-[320svh] bg-ground-deep lg:h-[400svh]"
     >
       <div className="sticky top-0 h-svh overflow-hidden">
         {/* Map texture + a warm pool of light behind the scene */}

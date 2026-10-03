@@ -34,7 +34,7 @@ export default function ProgramOverview() {
         className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,var(--ground-deep)_0%,rgba(15,9,17,0)_14%),radial-gradient(60%_32%_at_50%_16%,rgba(122,58,96,0.2)_0%,rgba(15,9,17,0)_100%),radial-gradient(50%_30%_at_50%_62%,rgba(90,42,74,0.18)_0%,rgba(15,9,17,0)_100%)]"
       />
 
-      <div className="shell py-[clamp(96px,14vh,160px)]">
+      <div className="shell py-[clamp(40px,8vw,128px)]">
         {/* ---------- Beat 1: what it isn't → what it is ---------- */}
         <div className="relative mx-auto flex max-w-[52rem] flex-col items-center text-center">
           {/*
@@ -85,7 +85,7 @@ export default function ProgramOverview() {
             ))}
           </ul>
 
-          <Reveal className="mt-[clamp(48px,8vh,80px)]" rootMargin="0px 0px -25% 0px">
+          <Reveal className="mt-[clamp(36px,5vw,72px)]" rootMargin="0px 0px -25% 0px">
             <h2 id="overview-heading" className={`${H2} text-[clamp(2rem,3.4vw,2.875rem)]`}>
               <Rich value={c.headline} emClassName={EM} />
             </h2>
@@ -101,14 +101,14 @@ export default function ProgramOverview() {
         </div>
 
         {/* ---------- Beat 2: the two levels ---------- */}
-        <div className="mt-[clamp(96px,15vh,168px)]">
+        <div className="mt-[clamp(48px,8vw,128px)]">
           <Reveal className="text-center">
             <h3 className={`${H2} mx-auto max-w-[20ch] text-balance text-[clamp(1.75rem,2.8vw,2.375rem)]`}>
               <Rich value={c.levelsHeading} emClassName={EM} />
             </h3>
           </Reveal>
 
-          <div className="relative mx-auto mt-[clamp(40px,6vh,64px)] grid max-w-[1120px] gap-5 lg:grid-cols-2 lg:gap-6">
+          <div className="relative mx-auto mt-[clamp(28px,4vw,56px)] grid max-w-[1120px] gap-5 lg:grid-cols-2 lg:gap-6">
             {c.levels.map((level, i) => {
               const Visual = VISUALS[level.visual];
               return (

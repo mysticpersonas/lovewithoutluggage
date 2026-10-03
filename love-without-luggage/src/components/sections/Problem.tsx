@@ -160,7 +160,7 @@ export default function Problem() {
         className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,var(--ground-deep)_0%,rgba(15,9,17,0.55)_14%,rgba(15,9,17,0.2)_32%,rgba(15,9,17,0.2)_70%,rgba(15,9,17,0.6)_88%,var(--ground-deep)_100%)]"
       />
 
-      <div className="shell py-[clamp(96px,16vh,176px)]">
+      <div className="shell py-[clamp(40px,8vw,128px)]">
         <h2
           id="problem-heading"
           className="mx-auto max-w-[20ch] text-balance text-center font-serif text-[clamp(2rem,3.3vw,2.75rem)] font-normal leading-[1.1] tracking-[-0.02em] text-ink [font-variation-settings:'SOFT'_100]"
@@ -169,7 +169,7 @@ export default function Problem() {
         </h2>
 
         {/* ---- The journey map ---- */}
-        <div ref={mapRef} className="relative mx-auto mt-[clamp(64px,11vh,120px)] max-w-[1000px]">
+        <div ref={mapRef} className="relative mx-auto mt-[clamp(40px,6vw,96px)] max-w-[1000px]">
           <svg
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 h-full w-full overflow-visible"
@@ -206,7 +206,7 @@ export default function Problem() {
             )}
           </svg>
 
-          <ol className="relative flex flex-col gap-[clamp(72px,12vh,136px)]">
+          <ol className="relative flex flex-col gap-[clamp(44px,7vw,112px)]">
             {beats.map((beat, i) => {
               const on = reached > i;
               const flip = i % 2 === 1; // desktop: stops alternate sides, like a winding road
@@ -246,7 +246,7 @@ export default function Problem() {
           </ol>
 
           {/* ---- Where the road ends: the reframe ---- */}
-          <div className="mt-[clamp(72px,12vh,136px)] flex flex-col items-center text-center">
+          <div className="mt-[clamp(44px,7vw,112px)] flex flex-col items-center text-center">
             <span
               ref={endRef}
               aria-hidden="true"

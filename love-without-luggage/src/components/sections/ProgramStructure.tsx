@@ -81,7 +81,7 @@ export default function ProgramStructure() {
         <div className="absolute inset-0 bg-[radial-gradient(50%_25%_at_50%_10%,rgba(122,58,96,0.18)_0%,rgba(15,9,17,0)_100%)]" />
       </div>
 
-      <div className="shell py-[clamp(96px,14vh,160px)]">
+      <div className="shell py-[clamp(40px,8vw,128px)]">
         {/* ---------- Intro ---------- */}
         <Reveal className="mx-auto max-w-[46rem] text-center">
           <p className="inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.14em] text-ink-faint sm:text-[13px]">
@@ -97,7 +97,7 @@ export default function ProgramStructure() {
         </Reveal>
 
         {/* ---------- At a glance ---------- */}
-        <Reveal delay={120} className="mx-auto mt-[clamp(40px,6vh,64px)] max-w-[1120px]">
+        <Reveal delay={120} className="mx-auto mt-[clamp(28px,4vw,56px)] max-w-[1120px]">
           <div className="panel grid gap-6 p-6 sm:p-8 lg:grid-cols-[1.2fr_2fr] lg:items-center lg:gap-10">
             <div>
               <p className={`${LABEL} text-accent`}>{c.immersion.label}</p>
@@ -124,7 +124,7 @@ export default function ProgramStructure() {
             (it sits under the floating nav), so nothing you've scrolled past can
             peek out above it. A soft fade below its edge keeps the hand-off clean.
           */}
-          <div className="sticky top-0 z-30 mx-[calc(50%-50vw)] mt-[clamp(16px,3vh,40px)] bg-ground-deep pt-[var(--nav-h)]">
+          <div className="sticky top-0 z-30 mx-[calc(50%-50vw)] mt-[clamp(8px,2vw,32px)] bg-ground-deep pt-[var(--nav-h)]">
             <div className="shell">
               <div className="relative mx-auto flex max-w-[1120px] items-center gap-3 py-3 sm:gap-5 sm:py-4">
                 <span className="shrink-0 text-[11px] font-medium uppercase tracking-[0.14em] text-ink-faint sm:hidden">
@@ -186,7 +186,7 @@ export default function ProgramStructure() {
                 phaseRefs.current[pi] = el;
               }}
               aria-labelledby={`phase-${pi}`}
-              className="grid gap-8 pt-[clamp(48px,8vh,96px)] lg:grid-cols-[0.9fr_1.1fr] lg:gap-16"
+              className="grid gap-8 pt-[clamp(36px,5vw,88px)] lg:grid-cols-[0.9fr_1.1fr] lg:gap-16"
             >
               {/* Left: phase, quote, goal — stays in view while sessions scroll by */}
               <div className="lg:sticky lg:top-[calc(var(--nav-h)+112px)] lg:self-start">
@@ -287,7 +287,7 @@ export default function ProgramStructure() {
         </div>
 
         {/* ---------- CTA ---------- */}
-        <Reveal className="mt-[clamp(80px,12vh,136px)] flex justify-center">
+        <Reveal className="mt-[clamp(44px,6vw,104px)] flex justify-center">
           <Button href={c.cta.href} className="btn-glow">
             {c.cta.label}
           </Button>
