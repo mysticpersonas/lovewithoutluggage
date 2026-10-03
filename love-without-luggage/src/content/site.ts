@@ -18,7 +18,7 @@ export const nav: NavContent = {
     { label: "Home", href: "#top" },
     { label: "The Program", href: "#program" },
     { label: "Your Guides", href: "#guides" },
-    { label: "Guarantee", href: "#guarantee" },
+    { label: "Join", href: "#join" },
   ],
 };
 
@@ -46,7 +46,6 @@ export const hero: HeroContent = {
   trust: [
     "6-week live coaching",
     "Led by Dr. Travis & Michelle Fox",
-    "7-day risk-free guarantee",
   ],
 };
 
@@ -298,16 +297,16 @@ export const manifesto: ManifestoContent = {
       ],
     },
   ],
-  guarantee: {
+  closing: {
     photo: "/images/travis-michelle.jpg",
     photoAlt: "Dr. Travis Fox and Michelle Fox, laughing together",
     caption: "Dr. Travis & Michelle Fox",
-    label: "7-day guarantee",
+    label: "LOVE Without Luggage",
     heading: [
-      { text: "Try it " },
-      { text: "100% risk-free.", em: true },
+      { text: "A 6-Week Couples Healing Immersion with " },
+      { text: "Dr. Travis & Michelle Fox.", em: true },
     ],
-    body: "If you don’t feel a shift in 7 days, we’ll refund you, no questions asked.",
+    body: "Live 1:1 and joint couples sessions, two each week, for six weeks.",
   },
   cta: { label: "Join now", href: RESERVE_HREF },
 };
@@ -372,7 +371,7 @@ export const footer: FooterContent = {
         { label: "Home", href: "#top" },
         { label: "The Roadmap", href: "#program" },
         { label: "Your Guides", href: "#guides" },
-        { label: "Guarantee", href: "#guarantee" },
+        { label: "Join", href: "#join" },
       ],
     },
   ],

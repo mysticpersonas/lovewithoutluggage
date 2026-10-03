@@ -20,7 +20,7 @@ export default function HomePage() {
         <Journey />
         <ProgramStructure />
         <Guides />
-        {/* Closing manifesto + guarantee: the last section ("Guarantee" in the nav lands here) */}
+        {/* Closing manifesto + join card: the last section ("Join" in the nav lands here) */}
         <Manifesto />
       </main>
       <Footer />

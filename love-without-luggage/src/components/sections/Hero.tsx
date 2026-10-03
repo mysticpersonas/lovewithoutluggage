@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import { hero } from "@/content/site";
 import Button from "@/components/ui/Button";
 import Rich from "@/components/ui/Rich";
-import { CheckIcon } from "@/components/ui/icons";
 
 const HERO_VIDEO = { webm: "/hero.webm", mp4: "/hero.mp4" };
 const HERO_POSTER_URL = "/hero-poster.jpg";
@@ -22,8 +21,6 @@ export default function Hero() {
     // Some browsers block autoplay until nudged.
     video.play()?.catch(() => {});
   }, []);
-
-  const lastTrust = hero.trust.length - 1;
 
   return (
     <section
@@ -89,11 +86,6 @@ export default function Hero() {
           <li key={item} className="inline-flex items-center gap-5">
             {i > 0 && <span className="dot hidden sm:block" aria-hidden="true" />}
             <span className="inline-flex items-center gap-2 text-[13px] font-medium text-ink-soft sm:text-[14px]">
-              {i === lastTrust && (
-                <span className="inline-flex h-[18px] w-[18px] items-center justify-center rounded-full bg-accent text-accent-ink sm:h-5 sm:w-5">
-                  <CheckIcon />
-                </span>
-              )}
               {item}
             </span>
           </li>

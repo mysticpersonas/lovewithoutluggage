@@ -61,7 +61,7 @@ const countWords = (v: RichText) => v.reduce((n, p) => n + p.text.split(/\s+/).f
 
 export default function Manifesto() {
   const c = manifesto;
-  const g = c.guarantee;
+  const g = c.closing;
   const lineRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
   useEffect(() => {
@@ -129,9 +129,9 @@ export default function Manifesto() {
           ))}
         </div>
 
-        {/* ---------- Guarantee: their photo + the promise + the last call to action ---------- */}
+        {/* ---------- Closing card: their photo + the program in one line + the last call to action ---------- */}
         <div
-          id="guarantee"
+          id="join"
           className="mx-auto mt-[clamp(40px,6vw,88px)] max-w-[1000px] scroll-mt-[calc(var(--nav-h)+16px)]"
         >
           <div className="panel grid overflow-hidden md:grid-cols-[1fr_1.05fr] md:bg-[#160d19]">

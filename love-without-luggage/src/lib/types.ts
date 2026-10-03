@@ -85,7 +85,7 @@ export type ManifestoContent = {
   eyebrow: string;
   /** Each line lights up word by word as you scroll; `size` sets its weight in the story */
   lines: Array<{ text: RichText; size: "lead" | "body" | "turn" | "close" }>;
-  guarantee: {
+  closing: {
     photo: string;
     photoAlt: string;
     caption: string;
