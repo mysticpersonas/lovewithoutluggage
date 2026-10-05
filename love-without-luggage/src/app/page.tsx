@@ -7,6 +7,7 @@ import ProgramStructure from "@/components/sections/ProgramStructure";
 import Manifesto from "@/components/sections/Manifesto";
 import Guides from "@/components/sections/Guides";
 import Footer from "@/components/sections/Footer";
+import BookingModal from "@/components/ui/BookingModal";
 
 export default function HomePage() {
   return (
@@ -24,6 +25,8 @@ export default function HomePage() {
         <Manifesto />
       </main>
       <Footer />
+      {/* Opens from any "#book" button */}
+      <BookingModal />
     </>
   );
 }

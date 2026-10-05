@@ -10,8 +10,8 @@ import type {
   FooterContent,
 } from "@/lib/types";
 
-// TODO: replace with the real checkout / booking URL once confirmed.
-const RESERVE_HREF = "#reserve";
+// Every booking button links here; <BookingModal> catches it and opens the calendar.
+const RESERVE_HREF = "#book";
 
 export const nav: NavContent = {
   links: [
