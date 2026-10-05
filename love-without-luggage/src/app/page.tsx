@@ -21,7 +21,7 @@ export default function HomePage() {
         <Journey />
         <ProgramStructure />
         <Guides />
-        {/* Closing manifesto + join card: the last section ("Join" in the nav lands here) */}
+        {/* Closing manifesto + join card: the last section */}
         <Manifesto />
       </main>
       <Footer />

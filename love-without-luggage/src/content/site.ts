@@ -18,7 +18,7 @@ export const nav: NavContent = {
     { label: "Home", href: "#top" },
     { label: "The Program", href: "#program" },
     { label: "Your Guides", href: "#guides" },
-    { label: "Join", href: "#join" },
+    { label: "Join", href: RESERVE_HREF },
   ],
 };
 
@@ -371,7 +371,7 @@ export const footer: FooterContent = {
         { label: "Home", href: "#top" },
         { label: "The Roadmap", href: "#program" },
         { label: "Your Guides", href: "#guides" },
-        { label: "Join", href: "#join" },
+        { label: "Join", href: RESERVE_HREF },
       ],
     },
   ],
