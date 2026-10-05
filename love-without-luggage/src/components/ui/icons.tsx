@@ -74,3 +74,20 @@ export function CheckIcon({ size = 12 }: IconProps) {
     </svg>
   );
 }
+
+// Brand mark — the same gold heart on plum as the favicon (src/app/icon.svg)
+export function LogoMark({ size = 44 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true">
+      <rect width="32" height="32" rx="9" fill="#1d1220" />
+      <rect x="0.5" y="0.5" width="31" height="31" rx="8.5" fill="none" stroke="rgba(248,241,236,0.12)" />
+      <path
+        d="M16 23.5s-7-4.1-7-9.4A3.8 3.8 0 0 1 16 12a3.8 3.8 0 0 1 7 2.1c0 5.3-7 9.4-7 9.4Z"
+        fill="none"
+        stroke="#e6c89c"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}

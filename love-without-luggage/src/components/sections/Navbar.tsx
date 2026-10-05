@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { nav } from "@/content/site";
-import { MenuIcon } from "@/components/ui/icons";
+import { LogoMark, MenuIcon } from "@/components/ui/icons";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -17,8 +17,18 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-[60]">
-      {/* Desktop: the link rail, centred on its own. Mobile: just the menu toggle, pinned right. */}
-      <div className="shell flex min-h-nav items-center justify-end lg:justify-center">
+      {/* Logo left, menu toggle right on phones. On desktop a 3-column grid keeps
+          the link rail dead-centre with the logo on the left. */}
+      <div className="shell flex min-h-nav items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr]">
+        <a
+          href="#top"
+          aria-label="Love Without Luggage, back to top"
+          onClick={() => setOpen(false)}
+          className="justify-self-start rounded-[12px] shadow-[0_6px_20px_rgba(8,4,10,0.45)] transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(230,200,156,0.18)]"
+        >
+          <LogoMark />
+        </a>
+
         <nav
           aria-label="Primary"
           className="hidden items-center rounded-full border border-hairline bg-glass h-12 px-7 backdrop-blur-[18px] backdrop-saturate-[1.2] lg:flex"
